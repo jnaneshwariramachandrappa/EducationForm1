@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Education Registration Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h2>Online Education Registration Form</h2>
+
+  <form id="registrationForm" action="submit_form.php" method="POST">
+    <table>
+      <tr>
+        <td><label for="name">Student Name</label></td>
+        <td><input type="text" id="name" name="name" required></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email</label></td>
+        <td><input type="email" id="email" name="email" required></td>
+      </tr>
+      <tr>
+        <td><label for="phone">Phone</label></td>
+        <td><input type="text" id="phone" name="phone" required></td>
+      </tr>
+      <tr>
+        <td><label for="address">Address</label></td>
+        <td><textarea id="address" name="address" required></textarea></td>
+      </tr>
+      <tr>
+        <td><label for="gender">Gender</label></td>
+        <td>
+          <input type="radio" id="male" name="gender" value="male" required> Male
+          <input type="radio" id="female" name="gender" value="female"> Female
+          <input type="radio" id="otherGender" name="gender" value="other"> Other
+        </td>
+      </tr>
+      <tr>
+        <td><label for="dob">Date of Birth</label></td>
+        <td><input type="date" id="dob" name="dob" required></td>
+      </tr>
+      <tr>
+        <td><label for="college">College Name</label></td>
+        <td><input type="text" id="college" name="college" required></td>
+      </tr>
+      <tr>
+        <td><label for="currentlyStudying">Currently Studying</label></td>
+        <td>
+          <select id="currentlyStudying" name="currentlyStudying" required>
+            <option value="">Select</option>
+            <option value="BE">B.E</option>
+            <option value="BTech">B.Tech</option>
+            <option value="PhD">Ph.D</option>
+            <option value="Other">Other</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="nptelCourse">Choose NPTEL Course</label></td>
+        <td>
+          <select id="nptelCourse" name="nptelCourse" required>
+            <option value="">Select</option>
+            <option value="PJava">Programming in Java</option>
+            <option value="CC">Cloud Computing</option>
+            <option value="Dbms">Database Management System</option>
+            <option value="DSE">Data Science for Engineers</option>
+            <option value="AGT">Advanced Graph Theory</option>
+            <option value="PDS">Python for Data Science</option>
+            <option value="Other">Other</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="paymentMethod">Payment Method</label></td>
+        <td>
+          <input type="radio" id="creditCard" name="paymentMethod" value="Credit Card" required> Credit Card
+          <input type="radio" id="debitCard" name="paymentMethod" value="Debit Card" required> Debit Card
+        </td>
+      </tr>
+      <tr>
+        <td><label for="paymentAmount">Payment Amount</label></td>
+        <td><input type="number" id="paymentAmount" name="paymentAmount" required></td>
+      </tr>
+      <tr>
+        <td><label for="terms">Accept Terms & Conditions</label></td>
+        <td>
+          <input type="checkbox" id="terms" name="terms" required> I have read and understood the terms and conditions.
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><button type="submit">Submit</button></td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>

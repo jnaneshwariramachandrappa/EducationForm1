@@ -1,0 +1,32 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Collect and sanitize form data
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $address = htmlspecialchars($_POST['address']);
+    $gender = htmlspecialchars($_POST['gender']);
+    $dob = htmlspecialchars($_POST['dob']);
+    $college = htmlspecialchars($_POST['college']);
+    $currentlyStudying = htmlspecialchars($_POST['currentlyStudying']);
+    $nptelCourse = htmlspecialchars($_POST['nptelCourse']);
+    $paymentMethod = htmlspecialchars($_POST['paymentMethod']);
+    $paymentAmount = htmlspecialchars($_POST['paymentAmount']);
+    $terms = isset($_POST['terms']) ? 'Accepted' : 'Not Accepted';
+
+    // Display the submitted data
+    echo "<h2>Registration Details</h2>";
+    echo "<p><strong>Name:</strong> $name</p>";
+    echo "<p><strong>Email:</strong> $email</p>";
+    echo "<p><strong>Phone:</strong> $phone</p>";
+    echo "<p><strong>Address:</strong> $address</p>";
+    echo "<p><strong>Gender:</strong> $gender</p>";
+    echo "<p><strong>Date of Birth:</strong> $dob</p>";
+    echo "<p><strong>College:</strong> $college</p>";
+    echo "<p><strong>Currently Studying:</strong> $currentlyStudying</p>";
+    echo "<p><strong>NPTEL Course:</strong> $nptelCourse</p>";
+    echo "<p><strong>Payment Method:</strong> $paymentMethod</p>";
+    echo "<p><strong>Payment Amount:</strong> $paymentAmount</p>";
+    echo "<p><strong>Terms & Conditions:</strong> $terms</p>";
+}
+?>
